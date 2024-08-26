@@ -11,7 +11,7 @@ import axios from 'axios';
 export default {
   methods: {
     redirectToSSO() {
-      const ssoLoginUrl = "http://localhost:8000/login?redirect_uri=http://backend:8080/auth/callback";
+      const ssoLoginUrl = "http://backend:8000/login?redirect_uri=http://frontend:8080/auth/callback";
       window.location.href = ssoLoginUrl;
     }
   }
