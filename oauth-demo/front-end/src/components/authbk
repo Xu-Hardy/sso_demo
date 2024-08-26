@@ -1,0 +1,29 @@
+<template>
+  <div>
+    <h1>Processing your authentication...</h1>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'; // 引入axios
+
+export default {
+  created() {
+    this.handleAuthentication();
+  },
+  methods: {
+    handleAuthentication() {
+      const code = new URLSearchParams(this.$route.query).get('code');
+      console.log("code",code)
+
+      if (code) {
+      localStorage.setItem('access_token', response.data.access_token);
+        this.$router.push('/');
+      }
+      else{
+         this.$router.push('/login');
+      }
+    }
+  }
+}
+</script>
